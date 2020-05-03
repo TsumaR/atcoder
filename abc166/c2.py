@@ -7,21 +7,14 @@ for edge in edges:
     graph[edge[0]].append(edge[1])
     graph[edge[1]].append(edge[0])
 
-seen = [0] * (N+1)
-
-def dfs(x):
-    if seen[x] == 1:
-        return
-    else:
-        seen[x] = 1
-        for i in graph[x]:
-            dfs(i)
 
 ans = 0
 for i in range(1,N+1):
-    if seen[i] == 0:
-        print(i)
-        print(seen)
+    highest = True
+    for j in graph[i]:
+        if H[i-1] <= H[j-1]:
+            highest = False
+    if highest:
         ans += 1
-        dfs(i)
+
 print(ans)
