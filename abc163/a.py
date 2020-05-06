@@ -1,5 +1,7 @@
-N = list(input())
-if "7" in N:
-    print("Yes")
-else:
-    print("No")
+import math
+
+R = int(input())
+
+pai = math.pi
+
+print(2 * R * pai)

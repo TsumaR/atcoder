@@ -1,7 +1,9 @@
-N = int(input())
-result = 0
+N, M = map(int, input().split())
+A = list(map(int, input().split()))
 
-for i in range(N+1):
-    if i % 3 != 0 and i % 5 != 0:
-        result += i
-print(result)
+whole_day = N - sum(A)
+
+if whole_day >= 0:
+    print(whole_day)
+else:
+    print(-1)

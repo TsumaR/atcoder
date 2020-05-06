@@ -19,8 +19,6 @@ def dfs(x):
             distance[item[1]] = distance[x] + item[2]
             if distance[item[1]] <= M:
                 point += item[3]
-            print(point)
-            print(distance)
 
         # elif x == item[0] and distance + item[2] > M:
         #     break
@@ -29,4 +27,4 @@ def dfs(x):
     return point
 
 dfs(1)
-print(result)
+print(point)
