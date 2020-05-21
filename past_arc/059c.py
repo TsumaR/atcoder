@@ -5,7 +5,6 @@ N = int(input())
 A = list(map(int, input().split()))
 
 mean_num = mean(A)
-print(mean_num)
 Ceil = math.ceil(mean_num)
 Floor = math.floor(mean_num)
 
