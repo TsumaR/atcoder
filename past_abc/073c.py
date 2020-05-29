@@ -1,10 +1,8 @@
-N = int(input())
-A = [int(input()) for _ in range(N)]
+N, T = map(int, input().split())
+T_list = list(map(int, input().split()))
 
-result = set([])
-for i in A:
-    if i in result:
-        result.remove(i)
-    else:
-        result.add(i)
-print(len(result))
+result = T
+for i in range(1,N):
+    result += min(T, T_list[i] - T_list[i-1])
+
+print(result) 
